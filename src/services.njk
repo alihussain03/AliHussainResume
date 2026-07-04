@@ -12,26 +12,13 @@ permalink: /services/
       <h2>What I can do for you</h2>
     </div>
     <div class="skills-grid">
+      {% for service in services %}
       <div class="card">
-        <span class="eyebrow">Build</span>
-        <h3>Spring Boot / microservice development</h3>
-        <p>Designing and building Spring Boot services and microservice systems — the stack I've worked in daily for years.</p>
+        <span class="eyebrow">{{ service.eyebrow }}</span>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
       </div>
-      <div class="card">
-        <span class="eyebrow">Design</span>
-        <h3>Backend API design &amp; architecture</h3>
-        <p>REST API design and backend architecture that holds up as requirements evolve.</p>
-      </div>
-      <div class="card">
-        <span class="eyebrow">Modernize</span>
-        <h3>Legacy Java / JavaEE modernization</h3>
-        <p>Bringing older Java and JavaEE applications forward — I've worked on both ends, from JSP/Servlets to modern Spring.</p>
-      </div>
-      <div class="card">
-        <span class="eyebrow">Harden</span>
-        <h3>Test coverage &amp; QA hardening</h3>
-        <p>Raising test coverage and reliability with JUnit and Mockito — the same approach that took a production system from 65% to 92% coverage.</p>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>

@@ -25,8 +25,8 @@ Ali Hussain's personal engineering portfolio site (dual audience: recruiters and
 The site owner is non-technical; the editing story should improve in two stages:
 
 1. **Move page content into data files**: extract page content from the `.njk` templates into JSON/YAML under `src/_data/` so edits are plain-text value changes with no HTML involved. (Blog posts are already plain Markdown and can be edited via GitHub's web UI today.)
-   - **Done for About**: experience, skills, and education live in `src/_data/experience.json`, `skills.json`, and `education.json`; `about.njk` loops over them. Ampersands go in as plain `&` (Nunjucks auto-escapes). Empty `tech: []` on a role hides its pill row.
-   - **Still inline** (candidates for the same treatment): the homepage hero + impact highlights (`index.njk`), the four service cards (`services.njk`), and the Job Portal case study (`projects.njk`).
+   - **Done for About, Services, and Projects**: content lives in `src/_data/` — `experience.json`, `skills.json`, `education.json` (About); `services.json` (the offering cards); `projects.json` (`highlights` + `cases`). The templates loop over them. Ampersands go in as plain `&` (Nunjucks auto-escapes). Empty `tech: []` on a role/case hides its pill row; add a new object to `projects.json`'s `cases` array to add a case study.
+   - **Still inline** (candidate for the same treatment): the homepage hero + impact highlights (`index.njk`). The Services availability blurb stays inline (single block, not a repeating list).
 2. **Add a git-based CMS** (e.g. Pages CMS or Decap CMS) on top of those data files: a web editing UI that commits to GitHub, with the existing Actions workflow handling rebuild/deploy. No servers, no cost, no change to how the site looks.
 
 ### Contact form (FormSubmit.co)

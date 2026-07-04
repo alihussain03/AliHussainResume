@@ -13,18 +13,12 @@ permalink: /projects/
       <p>Results from professional work on enterprise systems at Nokia and Confiz.</p>
     </div>
     <div class="highlights">
+      {% for h in projects.highlights %}
       <div class="highlight">
-        <div class="num">~30%</div>
-        <p>Reduction in response time — 8+ Spring Boot microservices for real-time network monitoring and fault management.</p>
+        <div class="num">{{ h.num }}</div>
+        <p>{{ h.text }}</p>
       </div>
-      <div class="highlight">
-        <div class="num">65% → 92%</div>
-        <p>Test coverage increase from 150+ unit and integration tests, catching 25+ critical bugs pre-production.</p>
-      </div>
-      <div class="highlight">
-        <div class="num">~25%</div>
-        <p>Startup performance improvement with non-blocking Spring WebFlux and Reactor microservices under peak loads.</p>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -35,34 +29,35 @@ permalink: /projects/
       <span class="eyebrow">Project</span>
       <h2>Selected work</h2>
     </div>
+    {% for case in projects.cases %}
     <article class="case">
-      <span class="pill">Full stack</span>
-      <h2>Full Stack Job Portal</h2>
+      <span class="pill">{{ case.tag }}</span>
+      <h2>{{ case.title }}</h2>
       <dl>
         <div>
           <dt>Problem</dt>
-          <dd>Recruiters and applicants need one place to manage job listings and applications — with different capabilities for each role and secure access to sensitive data.</dd>
+          <dd>{{ case.problem }}</dd>
         </div>
         <div>
           <dt>What I did</dt>
           <dd>
             <ul>
-              <li>Built a full-stack job portal with Spring Boot, Thymeleaf, Spring Security, and JPA.</li>
-              <li>Recruiters can create job listings and view applicants; applicants can apply for open positions and track their applications.</li>
-              <li>Implemented secure user authentication and role-based access control.</li>
-              <li>Dynamic content rendering with Thymeleaf; persistent storage with Spring Data JPA and MySQL.</li>
+              {% for item in case.did %}<li>{{ item }}</li>{% endfor %}
             </ul>
           </dd>
         </div>
         <div>
           <dt>Result</dt>
-          <dd>A working portal where both sides of the hiring process — recruiters and applicants — manage their workflows in one secure, role-aware application.</dd>
+          <dd>{{ case.result }}</dd>
         </div>
       </dl>
+      {% if case.tech.length %}
       <div class="row-inline">
-        <span class="pill">Spring MVC</span><span class="pill">Thymeleaf</span><span class="pill">Spring Security</span><span class="pill">Spring Data JPA</span><span class="pill">Hibernate</span><span class="pill">MySQL</span>
+        {% for t in case.tech %}<span class="pill">{{ t }}</span>{% endfor %}
       </div>
+      {% endif %}
     </article>
+    {% endfor %}
     <div class="row-inline" style="margin-top:var(--s6)">
       <a class="btn btn-secondary" href="{{ site.github }}">More on GitHub</a>
       <a class="btn btn-text" href="/contact/">Have a similar project? →</a>

@@ -1,0 +1,22 @@
+[
+  {
+    "eyebrow": "Build",
+    "title": "Spring Boot / microservice development",
+    "description": "Designing and building Spring Boot services and microservice systems — the stack I've worked in daily for years."
+  },
+  {
+    "eyebrow": "Design",
+    "title": "Backend API design & architecture",
+    "description": "REST API design and backend architecture that holds up as requirements evolve."
+  },
+  {
+    "eyebrow": "Modernize",
+    "title": "Legacy Java / JavaEE modernization",
+    "description": "Bringing older Java and JavaEE applications forward — I've worked on both ends, from JSP/Servlets to modern Spring."
+  },
+  {
+    "eyebrow": "Harden",
+    "title": "Test coverage & QA hardening",
+    "description": "Raising test coverage and reliability with JUnit and Mockito — the same approach that took a production system from 65% to 92% coverage."
+  }
+]

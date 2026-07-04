@@ -1,0 +1,31 @@
+{
+  "highlights": [
+    {
+      "num": "~30%",
+      "text": "Reduction in response time — 8+ Spring Boot microservices for real-time network monitoring and fault management."
+    },
+    {
+      "num": "65% → 92%",
+      "text": "Test coverage increase from 150+ unit and integration tests, catching 25+ critical bugs pre-production."
+    },
+    {
+      "num": "~25%",
+      "text": "Startup performance improvement with non-blocking Spring WebFlux and Reactor microservices under peak loads."
+    }
+  ],
+  "cases": [
+    {
+      "tag": "Full stack",
+      "title": "Full Stack Job Portal",
+      "problem": "Recruiters and applicants need one place to manage job listings and applications — with different capabilities for each role and secure access to sensitive data.",
+      "did": [
+        "Built a full-stack job portal with Spring Boot, Thymeleaf, Spring Security, and JPA.",
+        "Recruiters can create job listings and view applicants; applicants can apply for open positions and track their applications.",
+        "Implemented secure user authentication and role-based access control.",
+        "Dynamic content rendering with Thymeleaf; persistent storage with Spring Data JPA and MySQL."
+      ],
+      "result": "A working portal where both sides of the hiring process — recruiters and applicants — manage their workflows in one secure, role-aware application.",
+      "tech": ["Spring MVC", "Thymeleaf", "Spring Security", "Spring Data JPA", "Hibernate", "MySQL"]
+    }
+  ]
+}
