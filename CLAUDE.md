@@ -24,8 +24,14 @@ Ali Hussain's personal engineering portfolio site (dual audience: recruiters and
 
 The site owner is non-technical; the editing story should improve in two stages:
 
-1. **Move page content into data files**: extract the bio, experience entries, services, skills, and education from the `.njk` templates into JSON/YAML under `src/_data/` so edits are plain-text value changes with no HTML involved. (Blog posts are already plain Markdown and can be edited via GitHub's web UI today.)
+1. **Move page content into data files**: extract page content from the `.njk` templates into JSON/YAML under `src/_data/` so edits are plain-text value changes with no HTML involved. (Blog posts are already plain Markdown and can be edited via GitHub's web UI today.)
+   - **Done for About**: experience, skills, and education live in `src/_data/experience.json`, `skills.json`, and `education.json`; `about.njk` loops over them. Ampersands go in as plain `&` (Nunjucks auto-escapes). Empty `tech: []` on a role hides its pill row.
+   - **Still inline** (candidates for the same treatment): the homepage hero + impact highlights (`index.njk`), the four service cards (`services.njk`), and the Job Portal case study (`projects.njk`).
 2. **Add a git-based CMS** (e.g. Pages CMS or Decap CMS) on top of those data files: a web editing UI that commits to GitHub, with the existing Actions workflow handling rebuild/deploy. No servers, no cost, no change to how the site looks.
+
+### Contact form (FormSubmit.co)
+
+The contact page (`contact.njk`) posts to `https://formsubmit.co/{{ site.email }}`; all former `mailto:` CTAs across the site now point to `/contact/`, and the email/phone are no longer shown as text (phone stays in `site.json` but is unused). **Activation is required**: the first real submission triggers a one-time confirmation email to the owner — the link in it must be clicked once before the form delivers. To hide the address from page source, swap the email in the form `action` for the random `formsubmit.co/<hash>` alias from that activation email. `_next` redirects to the `/thanks/` page (absolute URL, so it must track the deployed origin). The `_honey` input is the spam honeypot. Form submit shows a JS "Sending…" state as progressive enhancement — it still works with JS disabled.
 
 ## Build and development
 
