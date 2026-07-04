@@ -2,7 +2,7 @@
 layout: layouts/page.njk
 title: Contact
 eyebrow: Get in touch
-intro: Whether you're hiring or have a project in mind, email is the fastest way to reach me.
+intro: Whether you're hiring or have a project in mind, send me a message below and I'll get back to you.
 permalink: /contact/
 ---
 <section>
@@ -11,11 +11,11 @@ permalink: /contact/
       <div class="path-card">
         <span class="eyebrow">Hiring?</span>
         <h2>Recruiters</h2>
-        <p>Grab the CV, look through my GitHub, or email me directly about a role.</p>
+        <p>Grab the CV, look through my GitHub, or send me a message about a role.</p>
         <div class="stack">
           <div class="row-inline">
             <a class="btn btn-primary" href="{{ site.cv }}" download="Ali-Hussain-CV.pdf">Download CV</a>
-            <a class="btn btn-secondary" href="mailto:{{ site.email }}?subject=Job%20opportunity">Email about a role</a>
+            <a class="btn btn-secondary" href="#message">Send a message</a>
           </div>
         </div>
       </div>
@@ -25,8 +25,7 @@ permalink: /contact/
         <p>Tell me what you're building — I'll reply with how I can help and when I'm available.</p>
         <div class="stack">
           <div class="row-inline">
-            <a class="btn btn-primary" href="mailto:{{ site.email }}?subject=Project%20inquiry">Start a project</a>
-            <a class="btn btn-secondary" href="mailto:{{ site.email }}?subject=Book%20a%20call">Book a call</a>
+            <a class="btn btn-primary" href="#message">Start a project</a>
           </div>
         </div>
       </div>
@@ -34,17 +33,42 @@ permalink: /contact/
   </div>
 </section>
 
+<section id="message">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Message</span>
+      <h2>Send me a message</h2>
+    </div>
+    <form class="contact-form" action="https://formsubmit.co/{{ site.email }}" method="POST">
+      <input type="hidden" name="_subject" value="New message from alihussain website">
+      <input type="hidden" name="_next" value="https://alihussain03.github.io/AliHussainResume/thanks/">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="field">
+        <label for="cf-name">Your name</label>
+        <input class="input" id="cf-name" type="text" name="name" required>
+      </div>
+      <div class="field">
+        <label for="cf-email">Your email</label>
+        <input class="input" id="cf-email" type="email" name="email" placeholder="you@company.com" required>
+      </div>
+      <div class="field">
+        <label for="cf-message">Message</label>
+        <textarea class="input" id="cf-message" name="message" rows="6" required></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Send message</button>
+    </form>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Details</span>
+      <span class="eyebrow">Elsewhere</span>
       <h2>Where to find me</h2>
     </div>
     <ul class="contact-list">
-      <li><span class="k">Email</span><a class="link" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
       <li><span class="k">GitHub</span><a class="link" href="{{ site.github }}">github.com/alihussain03</a></li>
       <li><span class="k">LinkedIn</span><a class="link" href="{{ site.linkedin }}">linkedin.com/in/alihussain03</a></li>
-      <li><span class="k">Phone</span><a class="link" href="tel:+358417003475">{{ site.phone }}</a></li>
       <li><span class="k">Location</span>{{ site.location }}</li>
     </ul>
   </div>
