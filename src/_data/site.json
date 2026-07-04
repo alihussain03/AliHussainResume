@@ -6,5 +6,10 @@
   "phone": "+358 41 7003475",
   "github": "https://github.com/alihussain03",
   "linkedin": "https://www.linkedin.com/in/alihussain03",
-  "cv": "/assets/files/ali-hussain-cv.pdf"
+  "cv": "/assets/files/ali-hussain-cv.pdf",
+  "footerLinks": [
+    { "label": "Contact", "href": "/contact/" },
+    { "label": "GitHub", "href": "https://github.com/alihussain03" },
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/in/alihussain03" }
+  ]
 }

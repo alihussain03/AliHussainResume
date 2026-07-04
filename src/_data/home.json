@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "heading": "I build reliable backend systems for enterprise and cloud.",
+    "intro": "Backend-focused software engineer with 6+ years of experience — enterprise systems, Spring Boot microservices, and cloud platforms (AWS/Azure). Currently working on infrastructure in the telecom and public safety domain at Teleste."
+  },
+  "paths": [
+    {
+      "eyebrow": "Hiring?",
+      "title": "Experience & CV",
+      "description": "My background, roles, and the results behind them — plus a résumé you can take with you.",
+      "buttons": [
+        { "label": "View experience", "href": "/about/", "variant": "primary" },
+        { "label": "Download CV", "cv": true, "variant": "secondary" }
+      ]
+    },
+    {
+      "eyebrow": "Have a project?",
+      "title": "Services & contact",
+      "description": "Spring Boot and backend engineering for client work — see what I offer and start a conversation.",
+      "buttons": [
+        { "label": "See services", "href": "/services/", "variant": "primary" },
+        { "label": "Start a project", "href": "/contact/", "variant": "secondary" }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "num": "~30%",
+      "text": "Faster response times from 8+ Spring Boot microservices built for real-time network monitoring and fault management at Nokia."
+    },
+    {
+      "num": "65% → 92%",
+      "text": "Test coverage raised with 150+ unit and integration tests — catching 25+ critical bugs before production."
+    },
+    {
+      "num": "~25%",
+      "text": "Startup performance improvement from non-blocking microservices built with Spring WebFlux and Reactor at Confiz."
+    }
+  ],
+  "trustCert": "Microsoft Certified: Azure Fundamentals"
+}

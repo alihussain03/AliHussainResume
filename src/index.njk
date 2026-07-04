@@ -5,28 +5,26 @@ title: ""
 <header class="hero">
   <div class="wrap reveal">
     <span class="eyebrow">{{ site.title }} — {{ site.location }}</span>
-    <h1 class="display">I build reliable backend systems for enterprise and cloud.</h1>
-    <p>Backend-focused software engineer with 6+ years of experience — enterprise systems, Spring Boot microservices, and cloud platforms (AWS/Azure). Currently working on infrastructure in the telecom and public safety domain at Teleste.</p>
+    <h1 class="display">{{ home.hero.heading }}</h1>
+    <p>{{ home.hero.intro }}</p>
 
     <div class="paths">
+      {% for path in home.paths %}
       <div class="path-card">
-        <span class="eyebrow">Hiring?</span>
-        <h2>Experience &amp; CV</h2>
-        <p>My background, roles, and the results behind them — plus a résumé you can take with you.</p>
+        <span class="eyebrow">{{ path.eyebrow }}</span>
+        <h2>{{ path.title }}</h2>
+        <p>{{ path.description }}</p>
         <div class="row-inline">
-          <a class="btn btn-primary" href="/about/">View experience</a>
-          <a class="btn btn-secondary" href="{{ site.cv }}" download="Ali-Hussain-CV.pdf">Download CV</a>
+          {% for btn in path.buttons %}
+          {% if btn.cv %}
+          <a class="btn btn-{{ btn.variant }}" href="{{ site.cv }}" download="Ali-Hussain-CV.pdf">{{ btn.label }}</a>
+          {% else %}
+          <a class="btn btn-{{ btn.variant }}" href="{{ btn.href }}">{{ btn.label }}</a>
+          {% endif %}
+          {% endfor %}
         </div>
       </div>
-      <div class="path-card">
-        <span class="eyebrow">Have a project?</span>
-        <h2>Services &amp; contact</h2>
-        <p>Spring Boot and backend engineering for client work — see what I offer and start a conversation.</p>
-        <div class="row-inline">
-          <a class="btn btn-primary" href="/services/">See services</a>
-          <a class="btn btn-secondary" href="/contact/">Start a project</a>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </header>
@@ -38,18 +36,12 @@ title: ""
       <h2>Work that moved the numbers</h2>
     </div>
     <div class="highlights">
+      {% for h in home.highlights %}
       <div class="highlight">
-        <div class="num">~30%</div>
-        <p>Faster response times from 8+ Spring Boot microservices built for real-time network monitoring and fault management at Nokia.</p>
+        <div class="num">{{ h.num }}</div>
+        <p>{{ h.text }}</p>
       </div>
-      <div class="highlight">
-        <div class="num">65% → 92%</div>
-        <p>Test coverage raised with 150+ unit and integration tests — catching 25+ critical bugs before production.</p>
-      </div>
-      <div class="highlight">
-        <div class="num">~25%</div>
-        <p>Startup performance improvement from non-blocking microservices built with Spring WebFlux and Reactor at Confiz.</p>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -57,7 +49,7 @@ title: ""
 <section>
   <div class="wrap">
     <div class="trust">
-      <span>Microsoft Certified: Azure Fundamentals</span>
+      <span>{{ home.trustCert }}</span>
       <span class="sep"></span>
       <a class="link" href="{{ site.github }}">github.com/alihussain03</a>
       <span class="sep"></span>
