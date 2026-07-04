@@ -15,7 +15,7 @@
 
 <div class="topbar">
   <div class="wrap">
-    <a class="logo" href="/">Ali Hussain<span class="mark">.</span></a>
+    <a class="logo" href="/">Ali Hussain</a>
     <nav class="nav" aria-label="Main">
       <a href="/about/"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
       <a href="/services/"{% if page.url == '/services/' %} aria-current="page"{% endif %}>Services</a>
@@ -42,7 +42,7 @@
 
 <footer>
   <div class="wrap">
-    <p>{{ site.name }} — {{ site.title }}, {{ site.location }}.</p>
+    <p>{{ site.name }} — {{ site.title }}, {{ site.location }}</p>
     <nav aria-label="Footer">
       {% for link in site.footerLinks %}
       <a href="{{ link.href }}">{{ link.label }}</a>

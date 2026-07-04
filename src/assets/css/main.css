@@ -42,7 +42,6 @@ h3 { font-size:var(--text-h3); font-weight:600; }
 }
 .topbar .wrap { display:flex; align-items:center; justify-content:space-between; height:66px; }
 .logo { font-family:var(--font-display); font-weight:500; font-size:1.167rem; color:var(--ink); letter-spacing:-.01em; text-decoration:none; }
-.logo .mark { color:var(--accent); }
 .nav { display:flex; gap:var(--s6); }
 .nav a { font-size:var(--text-sm); color:var(--stone); text-decoration:none; }
 .nav a:hover { color:var(--ink); }
