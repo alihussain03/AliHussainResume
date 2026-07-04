@@ -42,20 +42,21 @@ permalink: /contact/
     <form class="contact-form" action="https://formsubmit.co/{{ site.email }}" method="POST">
       <input type="hidden" name="_subject" value="New message from alihussain website">
       <input type="hidden" name="_next" value="https://alihussain03.github.io/AliHussainResume/thanks/">
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
       <div class="field">
-        <label for="cf-name">Your name</label>
-        <input class="input" id="cf-name" type="text" name="name" required>
+        <label for="cf-name">Your name <span class="req" aria-hidden="true">*</span></label>
+        <input class="input" id="cf-name" type="text" name="name" autocomplete="name" required>
       </div>
       <div class="field">
-        <label for="cf-email">Your email</label>
-        <input class="input" id="cf-email" type="email" name="email" placeholder="you@company.com" required>
+        <label for="cf-email">Your email <span class="req" aria-hidden="true">*</span></label>
+        <input class="input" id="cf-email" type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@company.com" required>
       </div>
       <div class="field">
-        <label for="cf-message">Message</label>
+        <label for="cf-message">Message <span class="req" aria-hidden="true">*</span></label>
         <textarea class="input" id="cf-message" name="message" rows="6" required></textarea>
       </div>
-      <button class="btn btn-primary" type="submit">Send message</button>
+      <p class="form-note"><span aria-hidden="true">*</span> Required. I'll only use your email to reply.</p>
+      <button class="btn btn-primary" type="submit" data-sending="Sending…">Send message</button>
     </form>
   </div>
 </section>
@@ -73,3 +74,19 @@ permalink: /contact/
     </ul>
   </div>
 </section>
+
+<script>
+  /* Progressive enhancement: show a sending state on submit.
+     The form still works with JavaScript disabled. */
+  document.querySelectorAll('.contact-form').forEach(function (form) {
+    form.addEventListener('submit', function () {
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn && !btn.disabled) {
+        btn.dataset.label = btn.textContent;
+        btn.textContent = btn.dataset.sending || 'Sending…';
+        btn.setAttribute('aria-busy', 'true');
+        btn.disabled = true;
+      }
+    });
+  });
+</script>
