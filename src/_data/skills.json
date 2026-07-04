@@ -1,0 +1,10 @@
+[
+  { "group": "Programming languages", "items": "Java, Python, JavaScript, C++, PHP, Go" },
+  { "group": "Frameworks", "items": "Spring MVC, Spring Boot, Spring Security, Hibernate, Node.js, Maven, Java Swing" },
+  { "group": "Cloud platforms", "items": "AWS, Azure" },
+  { "group": "DevOps tools", "items": "Docker, Kubernetes, Jenkins, Kafka" },
+  { "group": "Testing", "items": "JUnit, Selenium, Mockito" },
+  { "group": "Databases", "items": "MySQL, PostgreSQL, MongoDB" },
+  { "group": "Web technologies", "items": "HTML, CSS, JSP, Servlets, JavaScript, XML, JSON" },
+  { "group": "Version control & practices", "items": "Git, GitHub, GitLab, Gerrit · Agile, Scrum, Kanban" }
+]

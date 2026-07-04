@@ -1,0 +1,15 @@
+{
+  "degrees": [
+    {
+      "degree": "MSc (Tech), Software, Web & Cloud",
+      "detail": "Tampere University, Finland · 2020 – 2024 · GPA 3.76"
+    },
+    {
+      "degree": "BSc, Software Engineering",
+      "detail": "University of Management and Technology, Sialkot, Pakistan · 2013 – 2017 · GPA 3.48"
+    }
+  ],
+  "certifications": [
+    "Microsoft Certified: Azure Fundamentals"
+  ]
+}

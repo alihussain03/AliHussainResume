@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Senior Software Engineer",
+    "company": "Teleste",
+    "location": "Tampere, Finland",
+    "dates": "04/2025 – present",
+    "bullets": [
+      "Resolve critical customer-reported issues and bugs to maintain high system availability within Teleste's Public Safety and Mobility solutions.",
+      "Design and implement new features to enhance platform capabilities, collaborating with clients on evolving requirements."
+    ],
+    "tech": []
+  },
+  {
+    "title": "Software Engineer",
+    "company": "Nokia Solutions & Networks Oy",
+    "location": "Tampere, Finland",
+    "dates": "04/2022 – 03/2025",
+    "bullets": [
+      "Developed 8+ Spring Boot microservices for real-time network monitoring and fault management, reducing response time by ~30%.",
+      "Wrote 150+ unit and integration tests with JUnit and Mockito, increasing test coverage from 65% to 92% and catching 25+ critical bugs pre-production."
+    ],
+    "tech": ["Java", "Spring", "JUnit", "Mockito", "PostgreSQL", "REST APIs"]
+  },
+  {
+    "title": "Software Engineer",
+    "company": "Confiz Limited",
+    "location": "Lahore, Pakistan",
+    "dates": "12/2020 – 12/2021",
+    "bullets": [
+      "Built scalable, non-blocking microservices with Spring WebFlux and Reactor, improving responsiveness and reducing latency under peak loads; improved startup performance by ~25%.",
+      "Led API validation using Karate for robust end-to-end test coverage."
+    ],
+    "tech": ["Java", "Spring WebFlux", "Reactor", "Karate", "Gradle"]
+  },
+  {
+    "title": "Java Developer",
+    "company": "Retain",
+    "location": "Lahore, Pakistan",
+    "dates": "02/2019 – 12/2020",
+    "bullets": [
+      "Worked offshore on a gift card platform web application (JSP and Servlets); resolved client-reported issues and implemented new features such as schedulers to improve automation and reliability.",
+      "Collaborated with onshore teams and clients to troubleshoot defects and deliver critical updates."
+    ],
+    "tech": ["JavaEE", "Apache Tomcat"]
+  },
+  {
+    "title": "Junior Software Engineer",
+    "company": "Lone Star",
+    "location": "Lahore, Pakistan",
+    "dates": "05/2018 – 02/2019",
+    "bullets": [
+      "Started as an intern and transitioned into a full-time role based on performance and project impact.",
+      "Translated client requirements into scalable software designs; developed multi-tier JavaEE applications using Spring MVC."
+    ],
+    "tech": ["Java EE", "Spring MVC", "Hibernate", "JSP", "REST APIs"]
+  }
+]
