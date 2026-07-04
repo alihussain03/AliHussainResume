@@ -1,0 +1,51 @@
+---
+layout: layouts/page.njk
+title: Contact
+eyebrow: Get in touch
+intro: Whether you're hiring or have a project in mind, email is the fastest way to reach me.
+permalink: /contact/
+---
+<section>
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="path-card">
+        <span class="eyebrow">Hiring?</span>
+        <h2>Recruiters</h2>
+        <p>Grab the CV, look through my GitHub, or email me directly about a role.</p>
+        <div class="stack">
+          <div class="row-inline">
+            <a class="btn btn-primary" href="{{ site.cv }}">Download CV</a>
+            <a class="btn btn-secondary" href="mailto:{{ site.email }}?subject=Job%20opportunity">Email about a role</a>
+          </div>
+        </div>
+      </div>
+      <div class="path-card">
+        <span class="eyebrow">Have a project?</span>
+        <h2>Clients</h2>
+        <p>Tell me what you're building — I'll reply with how I can help and when I'm available.</p>
+        <div class="stack">
+          <div class="row-inline">
+            <a class="btn btn-primary" href="mailto:{{ site.email }}?subject=Project%20inquiry">Start a project</a>
+            <a class="btn btn-secondary" href="mailto:{{ site.email }}?subject=Book%20a%20call">Book a call</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Details</span>
+      <h2>Where to find me</h2>
+    </div>
+    <ul class="contact-list">
+      <li><span class="k">Email</span><a class="link" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      <li><span class="k">GitHub</span><a class="link" href="{{ site.github }}">github.com/alihussain03</a></li>
+      <li><span class="k">LinkedIn</span><a class="link" href="{{ site.linkedin }}">linkedin.com/in/alihussain03</a></li>
+      <li><span class="k">Phone</span><a class="link" href="tel:+358417003475">{{ site.phone }}</a></li>
+      <li><span class="k">Location</span>{{ site.location }}</li>
+    </ul>
+  </div>
+</section>

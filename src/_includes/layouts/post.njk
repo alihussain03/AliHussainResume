@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+---
+<header class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow"><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></span>
+    <h1>{{ title }}</h1>
+  </div>
+</header>
+<section>
+  <div class="wrap">
+    <div class="prose">
+      {{ content | safe }}
+    </div>
+    <p style="margin-top:var(--s7)"><a class="btn btn-text" href="/blog/">← All posts</a></p>
+  </div>
+</section>

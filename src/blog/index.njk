@@ -1,0 +1,20 @@
+---
+layout: layouts/page.njk
+title: Blog
+eyebrow: Writing
+intro: Notes on what I'm currently learning, technical write-ups, and work-in-progress topics.
+permalink: /blog/
+---
+<section>
+  <div class="wrap">
+    <div class="post-list">
+      {%- for post in collections.posts %}
+      <article class="post-item">
+        <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+        <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+        {% if post.data.excerpt %}<p>{{ post.data.excerpt }}</p>{% endif %}
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

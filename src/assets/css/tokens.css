@@ -1,0 +1,54 @@
+/* ============================================================
+   BRAND TOKENS v2.2 — "Quiet authority"
+   Copied VERBATIM from brand-style-guide.html (:root block).
+   That file is the source of truth — edit there, then re-copy.
+   ============================================================ */
+:root {
+  /* — Neutrals: warm greige, near-monochrome (calm + premium) — */
+  --ink:      #1A1917;  /* warm near-black — headings, dark sections */
+  --graphite: #3D3B37;  /* primary body text */
+  --stone:    #6E6A63;  /* secondary / muted text, labels */
+  --line:     #E4E2DC;  /* hairlines & dividers (warm) */
+  --mist:     #EFEDE8;  /* subtle section backgrounds */
+  --paper:    #F7F6F2;  /* base page background (soft off-white) */
+  --white:    #FFFFFF;  /* raised surfaces — cards sit above paper */
+
+  /* — ONE accent, shared by BOTH sites — deep petrol —
+     Chosen over bright blue: calmer, more premium, distinctive.
+     Dark enough to carry white text at AA. */
+  --accent:       #17514A;
+  --accent-press: #103E38;
+  --accent-tint:  #E4EDEA;
+  --accent-soft:  #6BB0A5;  /* the accent lightened, for use ON dark */
+
+  /* — Quiet functional colors (utilities, not brand) — */
+  --danger: #9E3B33;
+  --ok:     #3F6B4E;
+
+  /* — Type faces (two only) — */
+  --font-display: 'Spectral', Georgia, serif;
+  --font-body:    'Instrument Sans', system-ui, sans-serif;
+
+  /* — Type SCALE — all derived from the 18px base (1rem).
+     The base is set explicitly on <html> as 112.5% (= 18px) so it
+     still respects a visitor's own browser text-size preference.
+     Change that one value and the whole system rescales. — */
+  --text-label:   0.667rem;  /* ~12px — eyebrows, labels, captions */
+  --text-xs:      0.722rem;  /* ~13px */
+  --text-sm:      0.778rem;  /* ~14px */
+  --text-ui:      0.833rem;  /* ~15px — buttons, inputs, small UI */
+  --text-base:    1rem;      /* 18px — body (portfolio-grade reading size) */
+  --text-lead:    1.056rem;  /* ~19px — lead paragraphs */
+  --text-h3:      1.111rem;  /* ~20px */
+  --text-h2:      1.5rem;    /* ~27px */
+  --text-h1:      clamp(1.667rem, 4vw, 2.111rem);   /* ~30–38px */
+  --text-display: clamp(2.111rem, 5.2vw, 3rem);     /* ~38–54px */
+
+  /* — Spacing (8px base; fixed, not scaled) — */
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px;
+  --s6:32px; --s7:48px; --s8:72px; --s9:104px; --s10:140px;
+
+  /* — Radius & elevation — */
+  --r-sm:6px; --r-md:10px;
+  --shadow: 0 1px 2px rgba(26,25,23,.03), 0 10px 30px rgba(26,25,23,.05);
+}
